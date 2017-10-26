@@ -1,0 +1,4 @@
+[
+  {"title":"WorkTime_W","ranges":[1400,2000,2500],"measures":[1000,1650],"markers":[2100]},
+  {"title":"WorkDay_W","ranges":[3.5,4.25,5],"measures":[3.2,4.7],"markers":[4.4]}
+]

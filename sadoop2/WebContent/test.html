@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+body {
+  font: 10px sans-serif;
+}
+.y.axisRight text {
+    fill: orange;
+}
+.y.axisLeft text {
+    fill: steelblue;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.bar1:hover,.bar2:hover,.bar3:hover,.bar4:hover{
+fill: purple;
+}
+
+
+.bar1 {
+  fill: steelblue;
+}
+.bar2 {
+  fill: orange;
+}
+.bar3 {
+  fill: green;
+}
+.bar4 {
+  fill: pink;
+}
+.x.axis path {
+  display: none;
+}
+</style>
+<body>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<div>
+<script>
+
+var csvname2;
+
+
+var num=sessionStorage.getItem('No');
+   if(num==4030044)
+   {
+      csvname2="data/4030044_c.csv";
+    
+   }
+   else if(num==4026054)
+      {csvname2="data/4026043_c.csv";
+      
+      }
+   else if(num==4028196)
+      {
+      csvname2="data/4028196_c.csv";
+      
+        }
+   var margin = {top: 50, right: 50, bottom: 50, left: 50},
+    width = 500 - (margin.left+50) - (margin.right+50),
+    height = 300 - margin.top - margin.bottom;
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
+    
+var y0 = d3.scale.linear().domain([0,100]).range([height, 0]);
+var y1 = d3.scale.linear().domain([0,100]).range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+// create left yAxis
+var yAxisLeft = d3.svg.axis().scale(y0).ticks(5).orient("left");
+
+// create right yAxis
+var yAxisRight = d3.svg.axis().scale(y1).ticks(5).orient("right");
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("class", "graph")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    
+d3.csv(csvname2, type, function(error, data) {
+  x.domain(data.map(function(d) { return d.check; }));
+ y0.domain([0, d3.max(data, function(d) { return d.num; })]);  
+ y1.domain([0, d3.max(data, function(d) { return d.num; })]);  
+ 
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+  
+/*   svg.append("g")
+     .attr("class", "y axis axisLeft")
+     .attr("transform", "translate(0,0)")
+     .call(yAxisLeft)
+   .append("text")
+     .attr("y", 6)
+     .attr("dy", "-2em")
+     .style("text-anchor", "end") 
+     .style("text-anchor", "end")
+     .text("지각"); */
+   
+  svg.append("g")
+     .attr("class", "y axis axisLeft")
+     .attr("transform","translate(0,0)")/*  "translate(" + (width) + ",0)") */
+     .call(yAxisLeft)
+   .append("text")
+     .attr("y", 6)
+     .attr("dy", "-2em")
+     .attr("dx", "2em")
+     .style("text-anchor", "end")
+     .text("%");
+  bars = svg.selectAll(".bar").data(data).enter();
+  
+  bars.append("rect")
+      .attr("class", "bar1")
+      .attr("x", function(d) { return x(d.check); })
+      .attr("width", x.rangeBand()/2)
+      .attr("y", function(d) { return y0(d.num); })
+     .attr("height", function(d,i,j) { return height - y0(d.num); }); 
+  
+  bars.append("rect")
+      .attr("class", "bar2")
+      .attr("x", function(d) { return x(d.check) + x.rangeBand()/2; })
+      .attr("width", x.rangeBand() / 2)
+      .attr("y", function(d) { return y1(d.avg); })
+     .attr("height", function(d,i,j) { return height - y1(d.avg); }); 
+});
+
+
+function type(d) {
+  d.num = +d.num;
+  return d;
+}
+
+</script>
+</div>
+
+</body>

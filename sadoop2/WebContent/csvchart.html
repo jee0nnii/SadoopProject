@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+<script>
+// var svg =  d3.select("body").append("svg")
+// 							.attr("width",500)
+// 							.attr("heigth",500)
+// 							.style("background-color","yellow");
+// d3.csv("csvtest.csv",function(error,data){
+// 	if (error) throw error;
+	
+// 	var circle = svg.selectAll("circle").data(data)
+// 									.enter().append("circle")
+// 									.attr("ca",function(d){return d.a;})
+// 									.attr("cc",function(d){return d.c;})
+// 									.attr("r",10)
+// 									.attr("fill","red");
+// });
+// function type(d){
+// 	d.a=+d.a;
+// 	d.c=+d.c;
+// 	return d;
+// }
+d3.csv("forJava.csv",function(error,data){
+	var dataSet = []
+	if(error){
+		console.log(error);
+	}else{
+		for (var i = 0; i <data.length; i++){
+			console.log(data[i].workday_w3);
+	}
+	
+	}
+	
+})
+</script>
+</body>
+</html>

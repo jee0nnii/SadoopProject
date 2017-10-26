@@ -1,0 +1,66 @@
+source,target,value,shortname
+Contributions over $200,pattern2,100355684,Clinton
+Contributions under $200,pattern2,21739942,Clinton
+Party-affiliated PAC,pattern2,1000,Clinton
+Non-party PAC,pattern2,943409.2,Clinton
+Candidate contribution,pattern2,468036.7,Clinton
+Transfer from PAC,pattern2,4440000,From PAC
+Operating expenses offset,pattern2,2478242.16,Clinton
+Other income,pattern2,17320.53,Clinton
+pattern2,Operating expenses,95891194.15,Clinton
+pattern2,Refunds to individuals,1599663.98,Clinton
+pattern2,Refunds to PACs,3000,Clinton
+pattern2,Other spending,11215,Clinton
+pattern2,Cash on hand,32938563.75,Clinton
+Contributions over $200,Donald Trump,1870992,Trump
+Contributions under $200,Donald Trump,5626992,Trump
+Party-affiliated PAC,Donald Trump,57.62,Trump
+Candidate contribution,Donald Trump,250318.96,Trump
+Loans,Donald Trump,17534058.41,Trump
+Operating expenses offset,Donald Trump,243899.54,Trump
+Donald Trump,Operating expenses,23677801.33,Trump
+Donald Trump,Transfer to outside PAC,173050,Trump
+Donald Trump,Refunds to individuals,90746.73,Trump
+Donald Trump,Cash on hand,1584720.97,Trump
+Contributions over $200,pattern1,27370658,Sanders
+Contributions under $200,pattern1,67393013,Sanders
+Non-party PAC,pattern1,3636.59,Sanders
+Transfer from PAC,pattern1,1500000,From PAC
+Operating expenses offset,pattern1,5336.29,Sanders
+Other income,pattern1,38778.56,Sanders
+pattern1,Operating expenses,80729110.78,Sanders
+pattern1,Refunds to individuals,880331.05,Sanders
+pattern1,Other spending,40030,Sanders
+pattern1,Cash on hand,14661951.33,Sanders
+Contributions over $200,Ted Cruz,31445577,Cruz
+Contributions under $200,Ted Cruz,22893560,Cruz
+Non-party PAC,Ted Cruz,58852.25,Cruz
+Transfer from PAC,Ted Cruz,250012.93,From PAC
+Operating expenses offset,Ted Cruz,6216.48,Cruz
+Other income,Ted Cruz,7288.43,Cruz
+Ted Cruz,Operating expenses,40744495.31,Cruz
+Ted Cruz,Refunds to individuals,268490.9,Cruz
+Ted Cruz,Refunds to PACs,400,Cruz
+Ted Cruz,Other spending,2700,Cruz
+Ted Cruz,Cash on hand,13645419.33,Cruz
+Contributions over $200,John Kasich,7470876,Kasich
+Contributions under $200,John Kasich,955219,Kasich
+Non-party PAC,John Kasich,212700.62,Kasich
+Operating expenses offset,John Kasich,10094.07,Kasich
+John Kasich,Operating expenses,7141157.38,Kasich
+John Kasich,Refunds to individuals,24590,Kasich
+John Kasich,Refunds to PACs,6500,Kasich
+John Kasich,Cash on hand,1476642.36,Kasich
+Contributions over $200,Marco Rubio,27029786,Rubio
+Contributions under $200,Marco Rubio,6493284,Rubio
+Party-affiliated PAC,Marco Rubio,101.68,Rubio
+Non-party PAC,Marco Rubio,404274.44,Rubio
+Transfer from PAC,Marco Rubio,662431.58,From PAC
+Operating expenses offset,Marco Rubio,52735.8,Rubio
+Cash,Marco Rubio,3338454,Rubio
+Other income,Marco Rubio,10038.31,Rubio
+Marco Rubio,Operating expenses,31830495.47,Rubio
+Marco Rubio,Refunds to individuals,897566.36,Rubio
+Marco Rubio,Refunds to PACs,202640,Rubio
+Marco Rubio,Other spending,5000,Rubio
+Marco Rubio,Cash on hand,5055406.64,Rubio
